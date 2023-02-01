@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "../proto";
+
+
+message Car{
+   string car = 1;
+   string type =2;
+}
+
+message CarRequest{
+  string id = 1;
+}
+
+
+service CarObject{
+  rpc GetCar(CarRequest) returns(Car);
+}
